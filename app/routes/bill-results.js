@@ -1,13 +1,15 @@
 import Ember from 'ember';
+import config from '../config/environment';
 
 export default Ember.Route.extend({
   model: function(params) {
-   var url = 'http://congress.api.sunlightfoundation.com/bills?' + params.search + 'apikey=545928680a574d01bbaf53d04a982d84';
-   return Ember.$.getJSON(url).then(function(responseJSON) {
-     var bills = [];
-     responseJSON.results.forEach(function(bill) {
-       bills.push(bill);
-     });
+    var key = config.myApiKey;
+    var url = 'http://congress.api.sunlightfoundation.com/bills?' + params.search + 'apikey=' + key;
+    return Ember.$.getJSON(url).then(function(responseJSON) {
+      var bills = [];
+      responseJSON.results.forEach(function(bill) {
+        bills.push(bill);
+      });
      return bills;
    });
   },

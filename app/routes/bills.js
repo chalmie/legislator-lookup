@@ -1,17 +1,20 @@
+import config from '../config/environment';
 import Ember from 'ember';
 
 
 export default Ember.Route.extend({
   model: function(params) {
+    var key = config.myApiKey;
    if (typeof params !== 'string') {
      params = "";
    }
-   var url = 'http://congress.api.sunlightfoundation.com/bills?' + params + 'apikey=545928680a574d01bbaf53d04a982d84';
+   var url = 'http://congress.api.sunlightfoundation.com/bills?' + params + 'per_page=50&page=10&apikey=' + key;
    return Ember.$.getJSON(url).then(function(responseJSON) {
      var bills = [];
      responseJSON.results.forEach(function(bill) {
        bills.push(bill);
      });
+     console.log(bills);
      return bills;
    });
  },

@@ -1,9 +1,13 @@
-<h1>Bills</h1>
-<h4>Sort by:</h4>
+<div class="container">
+  <h1>Bills</h1>
+  <h4>Sort by:</h4>
 
-<button class="btn btn-lg btn-show"{{action 'showSenateBills'}}>Senate</button>
-<button class="btn btn-lg btn-show"{{action 'showHouseBills'}}>House</button>
-<button class="btn btn-lg btn-show"{{action 'showRecentBills'}}>Recent</button>
+  <button class="btn btn-lg btn-show">{{#link-to 'index'}}Home{{/link-to}}</button>
+  <button class="btn btn-lg btn-show"{{action 'showSenateBills'}}>Senate</button>
+  <button class="btn btn-lg btn-show"{{action 'showHouseBills'}}>House</button>
+  <button class="btn btn-lg btn-show"{{action 'showRecentBills'}}>Recent</button>
+</div>
+<br>
 
 <div class="container">
   <ul>
