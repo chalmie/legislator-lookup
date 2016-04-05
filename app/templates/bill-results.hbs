@@ -1,0 +1,19 @@
+<button class="btn btn-lg btn-show">{{#link-to 'index'}}Home{{/link-to}}</button>
+<button class="btn btn-lg btn-show"{{action 'showSenateBills'}}>Senate</button>
+<button class="btn btn-lg btn-show"{{action 'showHouseBills'}}>House</button>
+
+
+<div class="container">
+  <ul>
+    {{#each model as |bill|}}
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{bill.sponsor.title}} {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</h3>
+        </div>
+        <div class="panel-body">
+          {{bill.official_title}}
+        </div>
+      </div>
+    {{/each}}
+  </ul>
+</div>

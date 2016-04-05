@@ -1,0 +1,43 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Noteworthy', sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 940px;
+	padding: 0 10px;
+  text-align: center;
+}
+
+.header {
+  height: 350px;
+  text-align: center;
+  background-image:url('http://static.tumblr.com/0b1146a8fca1447dbd00342a6f383700/zqdyc6b/C03mqaskj/tumblr_static_tumblr_static_black_background_wood_2560x1440_by_starlyz-d4n0342.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 120px;
+  line-height: 150px;
+}
+
+.btn {
+  text-align: center;
+	background-color: black;
+	color: white;
+	border-color: white;
+}
+.btn-show:hover, .btn-show:focus, .btn-show:active, .btn-show.active, .open>.dropdown-toggle.btn-show {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
