@@ -11,7 +11,8 @@ Router.map(function() {
   this.route('contact');
   this.route('bills');
   this.route('committees');
-  this.route('bill-results', {path: '/bill-results/:search'});
+  this.route('bill-results', {path: '/bill-results/:bills'});
+  this.route('committee-results', {path: '/committee-results/:committees'});
 });
 
 export default Router;

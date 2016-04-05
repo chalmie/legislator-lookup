@@ -4,13 +4,9 @@ import config from '../config/environment';
 export default Ember.Route.extend({
   model: function(params) {
     var key = config.myApiKey;
-    var url = 'http://congress.api.sunlightfoundation.com/bills?' + params.search + 'apikey=' + key;
+    var url = 'http://congress.api.sunlightfoundation.com/bills?' + params.bills + 'apikey=' + key;
     return Ember.$.getJSON(url).then(function(responseJSON) {
-      var bills = [];
-      responseJSON.results.forEach(function(bill) {
-        bills.push(bill);
-      });
-     return bills;
+      return responseJSON.results;
    });
   },
   actions: {
